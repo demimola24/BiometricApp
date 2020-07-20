@@ -81,8 +81,7 @@
                 app:hintEnabled="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:prefixTextColor="@color/colorTextBody">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tie_mobile"
@@ -165,21 +164,21 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_forgot_password" />
 
         <TextView
-            android:id="@+id/tv_new_user"
+            android:id="@+id/tv_fingerprint_hint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="Use fingerprint?"
             android:textColor="@android:color/darker_gray"
             android:textSize="12sp"
-            app:layout_constraintEnd_toStartOf="@+id/tv_create_account"
+            app:layout_constraintEnd_toStartOf="@+id/tv_fingerprint"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
         <TextView
-            android:id="@+id/tv_create_account"
+            android:id="@+id/tv_fingerprint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -190,7 +189,7 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/tv_new_user"
+            app:layout_constraintStart_toEndOf="@+id/tv_fingerprint_hint"
             app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
         <ImageView
@@ -202,7 +201,7 @@
             android:visibility="visible"
             android:layout_marginTop="24dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_create_account"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fingerprint"
             android:layout_height="wrap_content"/>
 
 
