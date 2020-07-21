@@ -27,10 +27,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
 
         executor = ContextCompat.getMainExecutor(this)
         biometricPrompt = BiometricPrompt(this,
@@ -44,7 +40,8 @@ class MainActivity : AppCompatActivity() {
                     @NonNull result: BiometricPrompt.AuthenticationResult) {
                     super.onAuthenticationSucceeded(result)
                     try{
-                        showToast("Login Successful")
+                        Snackbar.make(contentPane, "Authentication was successful", Snackbar.LENGTH_LONG)
+                            .setAction("Okay", null).show()
 
                     }catch (e: Exception){
                         e.message?.let {
@@ -70,6 +67,7 @@ class MainActivity : AppCompatActivity() {
         // if needed by your app.
         //val biometricLoginButton = findViewById(R.id.biometric_login)
         tv_fingerprint.setOnClickListener {
+            if(hasBiometricFunctionality())
             biometricPrompt.authenticate(promptInfo)
         }
     }

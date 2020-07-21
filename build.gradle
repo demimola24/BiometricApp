@@ -5,6 +5,7 @@ buildscript {
     ext.versions = [
             'snappydb'              : '2.0.1',
             'biometric'             : '1.0.1',
+            'material'              : '1.2.0-alpha02'
     ]
 
     repositories {

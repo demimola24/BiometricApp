@@ -39,4 +39,6 @@ dependencies {
 
     /** snappy db*/
     implementation "com.github.systembugtj:snappydb:${versions.snappydb}"
+
+    implementation "com.google.android.material:material:${versions.material}"
 }
